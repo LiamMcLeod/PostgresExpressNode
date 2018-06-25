@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+/*
+Order
+* Positioning
+* Displays and Box Model
+* Colours
+* Text Properties
+* Other
+
+Anchors
+* Link, Visited, Hover, Active
+* L, V, H, A
+* LoVe, HAte
+*/
+
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width:100%;
+  position:absolute;
+  background: #eee;
+  padding: 0;
+  font-family: "Lato","Helvetica Nue", "Roboto", Arial, sans-serif;
+}
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+
+
+
+//===== Device Classes =====//
+  .no-mobile {
+    display:none;
+  }
+  .mobile-only{
+    display:block;
+  }
+
+  .tablet-only{
+    display:none;
+  }
+  .desktop-only{
+    display:none;
+  }
+  .wide-only{
+    display:none;
+  }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 737px) {
+
+
+
+  //===== Device Classes =====//
+  .no-mobile {
+    display:block;
+  }
+  .no-tablet {
+    display:block;
+  }
+  .no-desktop{
+    display:none;
+  }
+
+  .mobile-only{
+    display:none;
+  }
+  .tablet-only{
+    display:none;
+  }
+  .desktop-only{
+    display:block;
+  }
+  .wide-only{
+    display:none;
+  }
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+
+
+
+  //===== Device Classes =====//
+  .no-mobile {
+    display:block;
+  }
+  .no-tablet {
+    display:block;
+  }
+  .no-desktop{
+    display:block;
+  }
+  .no-wide{
+    display:none;
+  }
+
+  .mobile-only{
+    display:none;
+  }
+  .tablet-only{
+    display:none;
+  }
+  .desktop-only{
+    display:none;
+  }
+  .wide-only{
+    display:block;
+  }
+
+
+}
+
+/*============ Scroll ==============*/
+
+.wire {
+  border:1px solid #000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  z-index: 999;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(121, 121, 121, 0.5);
+  border-radius: 60px;
+  z-index: 999;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0 none transparent;
+  border-radius: 60px;
+  z-index: 999;
+}

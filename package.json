@@ -1,0 +1,32 @@
+{
+  "name": "BayesApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.13.3",
+    "connect": "^3.4.1",
+    "connect-flash": "^0.1.1",
+    "connect-pg-simple": "^3.1.0",
+    "cookie-parser": "^1.4.1",
+    "debug": "~2.2.0",
+    "dotenv": "^2.0.0",
+    "express": "~4.13.1",
+    "express-session": "^1.13.0",
+    "express-subdomain": "^1.0.5",
+    "jade": "~1.11.0",
+    "left-pad": "github:azer/left-pad",
+    "md5": "^2.1.0",
+    "method-override": "^2.3.5",
+    "morgan": "~1.6.1",
+    "node-sass-middleware": "0.8.0",
+    "node-uuid": "^1.4.7",
+    "pg": "^4.5.1",
+    "pg-hstore": "^2.3.2",
+    "psql-api": "^0.9.11",
+    "serve-favicon": "~2.3.0"
+  }
+}

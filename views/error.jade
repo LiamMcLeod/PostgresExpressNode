@@ -1,0 +1,52 @@
+doctype html
+html(lang="en-GB")
+    head
+        title #{status}
+        link(rel='stylesheet', href='/public/css/bootstrap.min.css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet', type='text/css')
+        link(rel='stylesheet', href='/public/css/styles.css')
+        style.
+            body {
+                height:100%;
+                width:100%;
+                position: relative;
+                font-family: "Lato","Helvetica Neue",Arial,sans-serif;
+                overflow: hidden;
+                background: #222 url('/public/img/bg/bg#{bg}.jpg') center no-repeat;
+                background-size: 200%;
+            }
+            #wrapper{
+                height: 100%;
+            }
+            header {
+                background: none;
+                height:50%;
+            }
+            main{
+                height:50%;
+
+                z-index: -1;
+            }
+            .error-jumbo {
+                height:155%;
+                width:80%;
+                margin:100px auto 50px auto;
+                border-radius:10px;
+                padding:8% 10% 10%;
+                overflow: hidden;
+                z-index:1000;
+            }
+
+    body
+        #wrapper
+            include includes/nav
+            header
+                .error-jumbo.jumbotron.text-center
+                    h1 #{statusCode}
+                    h2 #{message}
+                    h3 #{subtext}
+                    br
+                    br
+                    a.btn.btn-default.form-inline(href="js:history.back()") Return
+                    a.btn.btn-default.form-inline(href="/") Home
+            include includes/js

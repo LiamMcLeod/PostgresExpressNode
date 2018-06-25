@@ -1,0 +1,26 @@
+nav.navbar.navbar-fixed-top
+    .container-fluid
+        .navbar-header
+            a.no-tablet.no-mobile.navbar-brand.pull-left(href='/')
+                Express
+        .collapse.navbar-collapse.no-mobile.no-tablet
+            ul.nav.navbar-nav
+                li
+                    a.active(href='/') Home
+                li
+                    a(href='/about') About
+                li
+                    a(href='/contact') Contact
+            ul.nav.navbar-nav.navbar-right.nav-list
+                if !loggedIn
+                    li
+                        a(href='/') Sign Up &nbsp;
+                    li
+                        a(href='/user') Log In &nbsp;
+                else
+                    li
+                        a(href='/u/#{username}') #{username}
+                    li
+                        a.fa.fa-cog(href='/user')
+                    li
+                        a(href='/api/logout')  Log Out

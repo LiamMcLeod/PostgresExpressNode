@@ -1,0 +1,36 @@
+#%RAML 0.8
+title: ExpressApp
+version: 0.0.1
+baseUri: localhost:8080/api
+protocols: [HTTP, HTTPS]
+
+/:
+    description: test
+    /{term}:
+        displayName: test
+        get:
+          queryParameters:
+              prettyify:
+                default: false
+                required: false
+                displayName: pretty
+                description: prettifies JSON output.
+                type: boolean
+          responses:
+            200:
+              body:
+                application/json:
+                  example: |
+                    {
+                      "UserId": 7,
+                      "Username": "LiamMcLeod",
+                      "Password": "toor123",
+                      "etc": "You get the message",
+                    }
+        uriParameters:
+            term:
+                default: ''
+                required: true
+                type: string
+                displayName: Search Term
+                description: The search term used in the SQL query to get questions like {term}
